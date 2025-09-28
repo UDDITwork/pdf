@@ -23,9 +23,9 @@ export default function Header() {
             <div className="flex-shrink-0">
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-ada-pink rounded-full flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">a</span>
+                  <span className="text-white font-bold text-sm">v</span>
                 </div>
-                <span className="text-2xl font-bold text-white">ada</span>
+                <span className="text-2xl font-bold text-white">vatalique</span>
               </div>
             </div>
           </div>
