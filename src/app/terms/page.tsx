@@ -44,7 +44,7 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">5. Limitation of Liability</h2>
             <p className="text-gray-600 mb-4">
-              In no event shall VATALIQUE or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on VATALIQUE's website, even if VATALIQUE or a VATALIQUE authorized representative has been notified orally or in writing of the possibility of such damage.
+              In no event shall VATALIQUE or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on VATALIQUE&apos;s website, even if VATALIQUE or a VATALIQUE authorized representative has been notified orally or in writing of the possibility of such damage.
             </p>
           </section>
 

@@ -69,7 +69,7 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
                   </div>
                   <div className="flex-1">
                     <p className="text-white text-sm leading-relaxed mb-4">
-                      "Our AI solutions have transformed our content creation process, enabling us to produce high-quality articles and ad copy efficiently. The AI-powered workflows have revolutionized our approach to content generation."
+                      &ldquo;Our AI solutions have transformed our content creation process, enabling us to produce high-quality articles and ad copy efficiently. The AI-powered workflows have revolutionized our approach to content generation.&rdquo;
                     </p>
                     <div className="text-white text-sm">
                       <div className="font-semibold">Content Team Lead</div>
@@ -151,7 +151,7 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
                   </div>
                   <div className="flex-1">
                     <p className="text-gray-900 text-sm leading-relaxed mb-4">
-                      "The AI-powered development solutions have allowed us to deliver exceptional digital experiences to our clients. Our workflow automation has significantly improved our project delivery capabilities."
+                      &ldquo;The AI-powered development solutions have allowed us to deliver exceptional digital experiences to our clients. Our workflow automation has significantly improved our project delivery capabilities.&rdquo;
                     </p>
                     <div className="text-gray-900 text-sm">
                       <div className="font-semibold">Development Team</div>
@@ -262,7 +262,7 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
                   </div>
                   <div className="text-right">
                     <p className="text-gray-900 text-sm leading-relaxed mb-4">
-                      "Our AI financial companion has revolutionized how we approach financial planning. The intelligent automation and personalized guidance have helped our clients achieve their financial goals more effectively."
+                      &ldquo;Our AI financial companion has revolutionized how we approach financial planning. The intelligent automation and personalized guidance have helped our clients achieve their financial goals more effectively.&rdquo;
                     </p>
                     <div className="text-gray-900 text-sm">
                       <div className="font-semibold">Financial Team</div>
@@ -351,7 +351,7 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
                   {/* Right: Testimonial */}
                   <div className="w-full lg:w-80 text-right">
                     <p className="text-gray-900 text-sm leading-relaxed mb-4">
-                      "The AI-powered safety solutions have transformed our fire safety operations. The automated monitoring and compliance systems ensure we maintain the highest safety standards while reducing manual oversight."
+                      &ldquo;The AI-powered safety solutions have transformed our fire safety operations. The automated monitoring and compliance systems ensure we maintain the highest safety standards while reducing manual oversight.&rdquo;
                     </p>
                     <div className="text-gray-900 text-sm">
                       <div className="font-semibold">Safety Team</div>

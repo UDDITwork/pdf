@@ -9,7 +9,7 @@ const CallToActionSection: React.FC = () => {
         {/* Call to Action Text */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
-            let's talk—book a
+            let&apos;s talk—book a
           </h2>
           <div className="flex items-center justify-center gap-4">
             <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-black">free</span>

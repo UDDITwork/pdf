@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 interface ExperienceItem {
   id: number;
@@ -156,10 +157,11 @@ export default function AccordionSection() {
               >
                 {/* Realistic Background Image */}
                 <div className="absolute inset-0">
-                  <img 
+                  <Image 
                     src="https://imagedelivery.net/YFrrqfDHfRG8pCmKkJ5xTg/fb75619f-37dc-4443-1dc7-4cf5b0f60c00/w=undefined"
                     alt="Person working on laptop"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-black/20"></div>
                 </div>

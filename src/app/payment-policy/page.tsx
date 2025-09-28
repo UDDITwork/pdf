@@ -101,7 +101,7 @@ export default function PaymentPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Price Changes</h2>
             <p className="text-gray-600 mb-4">
-              We reserve the right to change our pricing with 30 days' notice. Existing customers will be notified of any price changes and can choose to:
+              We reserve the right to change our pricing with 30 days&apos; notice. Existing customers will be notified of any price changes and can choose to:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-4">
               <li>Continue with the new pricing</li>

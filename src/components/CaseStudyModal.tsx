@@ -77,7 +77,7 @@ export default function CaseStudyModal({ caseStudy, onClose }: CaseStudyModalPro
                     </span>
                   </div>
                   <blockquote className="text-gray-700 italic mb-4">
-                    "{caseStudy.testimonial.text}"
+                    &ldquo;{caseStudy.testimonial.text}&rdquo;
                   </blockquote>
                   <div className="text-sm text-gray-600">
                     <div className="font-semibold">{caseStudy.testimonial.author}</div>

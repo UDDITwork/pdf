@@ -168,7 +168,7 @@ export default function EnterpriseSection() {
               build your AI solutions—with or without code
             </h3>
             <p className="text-lg text-black mb-8 leading-relaxed">
-              Build only what's unique to your business and let our AI expertise handle the rest. Ensure compliance, security, and reliability, all while using comprehensive AI solutions that seamlessly operate across all channels, languages, and business functions.
+              Build only what&apos;s unique to your business and let our AI expertise handle the rest. Ensure compliance, security, and reliability, all while using comprehensive AI solutions that seamlessly operate across all channels, languages, and business functions.
             </p>
             <motion.button
               whileHover={{ scale: 1.02 }}

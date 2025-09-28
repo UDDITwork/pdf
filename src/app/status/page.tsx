@@ -111,7 +111,7 @@ export default function StatusPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Support</h2>
             <p className="text-gray-600 mb-4">
-              If you're experiencing issues not reflected on this status page, please contact our support team:
+              If you&apos;re experiencing issues not reflected on this status page, please contact our support team:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-4">
               <li>Email: support@vatalique.com</li>
