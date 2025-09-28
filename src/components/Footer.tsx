@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
           <div className="mb-4 md:mb-0">
             <h4 className="text-[#E0DFE1] font-semibold mb-2">Who we are</h4>
             <p className="text-[#E0DFE1] text-sm max-w-md">
-              Ada is an AI customer service company on a mission to make customer service extraordinary for everyone
+            Vatalique is an AI customer service company on a mission to make customer service extraordinary for everyone
             </p>
           </div>
           <div>
