@@ -1,0 +1,17 @@
+# Netlify redirects file
+# This file handles client-side routing and redirects for your Next.js app
+
+# Handle client-side routing for all routes
+/*    /index.html   200
+
+# Security headers and redirects
+/api/*  /api/:splat  200
+
+# Optional: Redirect old URLs to new ones (example)
+# /old-page    /new-page    301
+
+# Handle trailing slashes
+/*/  /*  301
+
+# Custom 404 handling (optional)
+# /404  /404.html  404
