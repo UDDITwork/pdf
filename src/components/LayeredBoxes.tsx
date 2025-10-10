@@ -36,14 +36,19 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
             {/* Left Section (Logo + BG) */}
             <div className="w-full md:w-[45%] h-80 md:h-auto relative bg-orange-400 flex items-end justify-start p-8">
               {/* Logo */}
-              <div className="flex items-center space-x-2">
+              <a 
+                href="https://zammernow.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200"
+              >
                 <div className="flex space-x-1">
                   <div className="w-1 h-6 bg-white transform rotate-12"></div>
                   <div className="w-1 h-6 bg-white transform -rotate-12"></div>
                 </div>
                 <span className="text-white font-bold text-xl">Zammernow</span>
                 <span className="text-white font-light text-lg">.com</span>
-              </div>
+              </a>
             </div>
 
             {/* Right Section (Content) */}
@@ -117,13 +122,18 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
             {/* Left Section (Logo + BG) */}
             <div className="w-full md:w-[45%] h-80 md:h-auto relative bg-yellow-400 flex items-end justify-start p-8">
               {/* Logo */}
-              <div className="flex items-center space-x-2">
+              <a 
+                href="https://gantavyam.site" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200"
+              >
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                   <span className="text-yellow-400 font-bold text-xl">G</span>
                 </div>
                 <span className="text-gray-900 font-bold text-xl">Gantavyam</span>
                 <span className="text-gray-900 font-light text-lg">.site</span>
-              </div>
+              </a>
             </div>
 
             {/* Right Section (Content) */}
@@ -199,12 +209,17 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
             {/* Left Section (Logo + BG) */}
             <div className="w-full md:w-[45%] h-80 md:h-auto relative bg-blue-400 flex items-end justify-start p-8">
               {/* Logo */}
-              <div className="flex items-center space-x-2">
+              <a 
+                href="https://richieai.in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200"
+              >
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                   <span className="text-blue-400 font-bold text-xl">R</span>
                 </div>
                 <span className="text-white font-bold text-xl">Richie AI</span>
-              </div>
+              </a>
             </div>
 
             {/* Right Section (Content) */}
@@ -286,10 +301,15 @@ export default function LayeredBoxes({ caseStudies }: LayeredBoxesProps) {
                 }}
               />
               {/* Rajput FIR Logo */}
-              <div className="relative z-10">
+              <a 
+                href="https://rajputfireservices.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative z-10 hover:opacity-80 transition-opacity duration-200"
+              >
                 <span className="text-white font-bold text-3xl md:text-4xl">Rajput FIR</span>
                 <div className="text-white font-light text-lg">Services</div>
-              </div>
+              </a>
             </div>
 
             {/* Right Section (Pink Background) */}
