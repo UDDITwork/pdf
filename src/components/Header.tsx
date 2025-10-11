@@ -11,7 +11,7 @@ export default function Header() {
   const pathname = usePathname();
   
   // Check if current page has white background
-  const isWhiteBackgroundPage = pathname === '/technology';
+  const isWhiteBackgroundPage = pathname === '/technology' || pathname === '/platform' || pathname === '/industries';
 
   const navigationItems = [
     { 
@@ -89,7 +89,17 @@ export default function Header() {
                 key={item.name} 
                 className="relative group"
                 onMouseEnter={() => item.hasDropdown && setOpenDropdown(item.name)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseLeave={(e) => {
+                  // Only close if mouse is leaving the entire dropdown area
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX;
+                  const y = e.clientY;
+                  
+                  // Add some padding to prevent accidental closing
+                  if (x < rect.left - 10 || x > rect.right + 10 || y < rect.top - 10 || y > rect.bottom + 150) {
+                    setOpenDropdown(null);
+                  }
+                }}
               >
                 <Link 
                   href={item.href}
@@ -103,12 +113,16 @@ export default function Header() {
 
                 {/* Dropdown Menu */}
                 {item.hasDropdown && openDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-white/30 py-2 z-50">
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-white/30 py-2 z-50"
+                    onMouseEnter={() => setOpenDropdown(item.name)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
                     {item.dropdownItems?.map((dropItem) => (
                       <Link
                         key={dropItem.name}
                         href={dropItem.href}
-                        className="block px-4 py-2 text-gray-800 hover:bg-ada-pink hover:text-white transition-colors duration-200"
+                        className="block px-4 py-3 text-gray-800 hover:bg-ada-pink hover:text-white transition-colors duration-200 border-l-4 border-transparent hover:border-ada-pink"
                       >
                         {dropItem.name}
                       </Link>

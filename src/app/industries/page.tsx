@@ -212,22 +212,22 @@ export default function IndustriesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+          <div className="inline-block mb-6 px-4 py-2 bg-ada-pink/10 border-2 border-ada-pink">
             <span className="text-ada-pink font-semibold">INDUSTRY EXPERTISE</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-black mb-6">
             AI Solutions Built for
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-ada-pink to-purple-400">
+            <span className="block text-ada-pink">
               Your Industry
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Deep expertise, proven results, tailored technology for 8+ industries
           </p>
         </div>
@@ -243,14 +243,18 @@ export default function IndustriesPage() {
                 <button
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry.id)}
-                  className={`p-6 rounded-2xl transition-all duration-300 hover:scale-105 ${
+                  className={`p-6 transition-all duration-300 border-4 ${
                     selectedIndustry === industry.id
-                      ? 'bg-gradient-to-br ' + industry.color + ' shadow-lg'
-                      : 'bg-white/10 backdrop-blur-md border border-white/20 hover:border-ada-pink/50'
+                      ? 'bg-gradient-to-br ' + industry.color + ' border-ada-pink'
+                      : 'bg-white border-gray-300 hover:border-ada-pink'
                   }`}
                 >
-                  <Icon className="h-12 w-12 text-white mb-4 mx-auto" />
-                  <h3 className="text-xl font-bold text-white">{industry.name}</h3>
+                  <Icon className={`h-12 w-12 mb-4 mx-auto ${
+                    selectedIndustry === industry.id ? 'text-white' : 'text-black'
+                  }`} />
+                  <h3 className={`text-xl font-bold ${
+                    selectedIndustry === industry.id ? 'text-white' : 'text-black'
+                  }`}>{industry.name}</h3>
                 </button>
               );
             })}
@@ -258,7 +262,7 @@ export default function IndustriesPage() {
 
           {/* Selected Industry Detail */}
           {selectedIndustry && (
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20">
+            <div className="bg-white p-8 md:p-12 border-4 border-ada-pink">
               {industries
                 .filter((ind) => ind.id === selectedIndustry)
                 .map((industry) => {
@@ -267,13 +271,13 @@ export default function IndustriesPage() {
                     <div key={industry.id} className="space-y-12">
                       {/* Header */}
                       <div className="text-center">
-                        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${industry.color} flex items-center justify-center mx-auto mb-6`}>
+                        <div className={`w-20 h-20 bg-gradient-to-br ${industry.color} flex items-center justify-center mx-auto mb-6`}>
                           <Icon className="h-10 w-10 text-white" />
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                           {industry.headline}
                         </h2>
-                        <p className="text-xl text-gray-300">
+                        <p className="text-xl text-gray-600">
                           {industry.description}
                         </p>
                       </div>
@@ -281,9 +285,9 @@ export default function IndustriesPage() {
                       {/* Content Grid */}
                       <div className="grid md:grid-cols-2 gap-8">
                         {/* Challenges */}
-                        <div className="bg-white/5 rounded-2xl p-6">
-                          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                            <BarChart3 className="h-6 w-6 text-red-400" />
+                        <div className="bg-gray-50 p-6 border-2 border-gray-200">
+                          <h3 className="text-2xl font-bold text-black mb-6 flex items-center gap-3">
+                            <BarChart3 className="h-6 w-6 text-red-500" />
                             Challenges We Solve
                           </h3>
                           <ul className="space-y-4">
@@ -292,23 +296,23 @@ export default function IndustriesPage() {
                                 <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                                   <span className="text-red-400 text-sm font-bold">{idx + 1}</span>
                                 </div>
-                                <span className="text-gray-300">{challenge}</span>
+                                <span className="text-black">{challenge}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
                         {/* Solutions */}
-                        <div className="bg-white/5 rounded-2xl p-6">
-                          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                            <CheckCircle className="h-6 w-6 text-green-400" />
+                        <div className="bg-gray-50 p-6 border-2 border-gray-200">
+                          <h3 className="text-2xl font-bold text-black mb-6 flex items-center gap-3">
+                            <CheckCircle className="h-6 w-6 text-green-500" />
                             Our Solutions
                           </h3>
                           <ul className="space-y-4">
                             {industry.solutions.map((solution, idx) => (
                               <li key={idx} className="flex items-start gap-3">
-                                <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-300">{solution}</span>
+                                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <span className="text-black">{solution}</span>
                               </li>
                             ))}
                           </ul>
@@ -316,7 +320,7 @@ export default function IndustriesPage() {
                       </div>
 
                       {/* Results */}
-                      <div className={`bg-gradient-to-br ${industry.color} rounded-2xl p-8`}>
+                      <div className={`bg-gradient-to-br ${industry.color} p-8`}>
                         <h3 className="text-2xl font-bold text-white mb-6 text-center">
                           Proven Results
                         </h3>
@@ -350,7 +354,7 @@ export default function IndustriesPage() {
 
                       {/* CTA */}
                       <div className="text-center">
-                        <button className="bg-ada-pink text-white px-8 py-4 rounded-full hover:bg-pink-600 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto shadow-lg shadow-pink-500/50">
+                        <button className="bg-ada-pink text-white px-8 py-4 hover:bg-pink-600 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto border-2 border-ada-pink">
                           View {industry.name} Case Studies
                           <ArrowRight className="h-5 w-5" />
                         </button>
@@ -365,14 +369,14 @@ export default function IndustriesPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto bg-gradient-to-r from-ada-pink to-purple-600 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="max-w-5xl mx-auto bg-white p-12 text-center border-4 border-ada-pink">
+          <h2 className="text-4xl font-bold text-black mb-4">
             Don't See Your Industry?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             We've worked with businesses across 40+ industries. Let's discuss your unique challenges.
           </p>
-          <button className="bg-white text-ada-pink px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto">
+          <button className="bg-ada-pink text-white px-8 py-4 hover:bg-pink-600 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto border-2 border-ada-pink">
             Book a Consultation
             <ArrowRight className="h-5 w-5" />
           </button>

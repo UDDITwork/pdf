@@ -400,42 +400,6 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      {/* Tech Stack */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Technology Stack</h2>
-            <p className="text-xl text-gray-600">
-              Enterprise-grade technologies powering your AI transformation
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {techStack.map((stack, index) => {
-              const Icon = stack.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-ada-pink/50 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${stack.color} rounded-xl flex items-center justify-center mb-6`}>
-                    <Icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{stack.category}</h3>
-                  <ul className="space-y-2">
-                    {stack.technologies.map((tech, idx) => (
-                      <li key={idx} className="text-gray-600 text-sm flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-ada-pink rounded-full"></div>
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Integrations */}
       <section className="py-20 px-6">

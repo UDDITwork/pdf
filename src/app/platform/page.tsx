@@ -118,30 +118,30 @@ export default function PlatformPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+          <div className="inline-block mb-6 px-4 py-2 bg-ada-pink/10 border-2 border-ada-pink">
             <span className="text-ada-pink font-semibold">AI-POWERED SOLUTIONS</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-black mb-6">
             Solutions for Every
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-ada-pink to-purple-400">
+            <span className="block text-ada-pink">
               Business Challenge
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             From customer service to supply chain – we build AI agents and automations that actually work
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="bg-ada-pink text-white px-8 py-4 rounded-full hover:bg-pink-600 transition-all duration-200 flex items-center text-lg font-semibold shadow-lg shadow-pink-500/50">
+            <button className="bg-ada-pink text-white px-8 py-4 hover:bg-pink-600 transition-all duration-200 flex items-center text-lg font-semibold border-2 border-ada-pink">
               Book a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full hover:bg-white/20 transition-all duration-200 border border-white/30 text-lg font-semibold">
+            <button className="bg-white text-ada-pink px-8 py-4 hover:bg-gray-100 transition-all duration-200 border-2 border-ada-pink text-lg font-semibold">
               View Case Studies
             </button>
           </div>
@@ -153,9 +153,9 @@ export default function PlatformPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center">
+              <div key={index} className="bg-white p-6 border-4 border-ada-pink text-center">
                 <div className="text-4xl font-bold text-ada-pink mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="text-black">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -166,10 +166,10 @@ export default function PlatformPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               Choose Your Solution
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-600">
               Comprehensive AI and automation solutions tailored to your needs
             </p>
           </div>
@@ -182,10 +182,10 @@ export default function PlatformPage() {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full flex items-center gap-2 transition-all duration-200 ${
+                  className={`px-6 py-3 flex items-center gap-2 transition-all duration-200 border-2 ${
                     selectedCategory === category.id
-                      ? 'bg-ada-pink text-white shadow-lg shadow-pink-500/50'
-                      : 'bg-white/10 backdrop-blur-md text-gray-300 hover:bg-white/20 border border-white/20'
+                      ? 'bg-ada-pink text-white border-ada-pink'
+                      : 'bg-white text-black border-gray-300 hover:border-ada-pink'
                   }`}
                 >
                   <Icon className="h-5 w-5" />
@@ -202,22 +202,22 @@ export default function PlatformPage() {
               return (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-ada-pink/50 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-white p-8 border-4 border-ada-pink hover:bg-gray-50 transition-all duration-300"
                 >
-                  <div className={`${solution.color} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
+                  <div className={`${solution.color} w-16 h-16 flex items-center justify-center mb-6`}>
                     <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
-                  <p className="text-gray-300 mb-6">{solution.description}</p>
+                  <h3 className="text-2xl font-bold text-black mb-3">{solution.title}</h3>
+                  <p className="text-gray-600 mb-6">{solution.description}</p>
                   <div className="space-y-3 mb-6">
                     {solution.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-ada-pink flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300 text-sm">{feature}</span>
+                        <span className="text-black text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <button className="w-full bg-ada-pink/20 text-ada-pink px-6 py-3 rounded-full hover:bg-ada-pink hover:text-white transition-all duration-200 flex items-center justify-center gap-2 font-semibold">
+                  <button className="w-full bg-ada-pink/20 text-ada-pink px-6 py-3 hover:bg-ada-pink hover:text-white transition-all duration-200 flex items-center justify-center gap-2 font-semibold border-2 border-ada-pink">
                     Learn More
                     <ArrowRight className="h-4 w-4" />
                   </button>
@@ -230,14 +230,14 @@ export default function PlatformPage() {
 
       {/* ROI Calculator CTA */}
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto bg-gradient-to-r from-ada-pink to-purple-600 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="max-w-5xl mx-auto bg-white p-12 text-center border-4 border-ada-pink">
+          <h2 className="text-4xl font-bold text-black mb-4">
             Calculate Your Potential ROI
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             See how much you could save with AI automation
           </p>
-          <button className="bg-white text-ada-pink px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto">
+          <button className="bg-ada-pink text-white px-8 py-4 hover:bg-pink-600 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto border-2 border-ada-pink">
             Try ROI Calculator
             <ArrowRight className="h-5 w-5" />
           </button>
