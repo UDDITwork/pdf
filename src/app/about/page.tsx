@@ -21,7 +21,7 @@ export default function AboutPage() {
     {
       icon: Users,
       title: 'Partnership',
-      description: 'Your success is our success. We\'re in this together, long-term.',
+      description: 'Your success is our success. We&apos;re in this together, long-term.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -274,7 +274,7 @@ export default function AboutPage() {
             Join Our Mission
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            We're always looking for talented people who share our vision
+            We&apos;re always looking for talented people who share our vision
           </p>
           <button className="bg-white text-ada-pink px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto">
             View Open Positions

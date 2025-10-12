@@ -371,10 +371,10 @@ export default function IndustriesPage() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto bg-white p-12 text-center border-4 border-ada-pink">
           <h2 className="text-4xl font-bold text-black mb-4">
-            Don't See Your Industry?
+            Don&apos;t See Your Industry?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            We've worked with businesses across 40+ industries. Let's discuss your unique challenges.
+            We&apos;ve worked with businesses across 40+ industries. Let&apos;s discuss your unique challenges.
           </p>
           <button className="bg-ada-pink text-white px-8 py-4 hover:bg-pink-600 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto border-2 border-ada-pink">
             Book a Consultation

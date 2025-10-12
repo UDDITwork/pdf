@@ -239,7 +239,7 @@ export default function PricingPage() {
                   </button>
 
                   <div className="space-y-4">
-                    <p className="text-sm font-semibold text-gray-300 uppercase">What's Included:</p>
+                    <p className="text-sm font-semibold text-gray-300 uppercase">What&apos;s Included:</p>
                     {tier.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <Check className="h-5 w-5 text-ada-pink flex-shrink-0 mt-0.5" />

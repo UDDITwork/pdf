@@ -153,7 +153,7 @@ export default function CustomersPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            See how we've transformed operations for 500+ enterprises across 40 countries
+            See how we&apos;ve transformed operations for 500+ enterprises across 40 countries
           </p>
         </div>
       </section>

@@ -453,7 +453,7 @@ export default function TechnologyPage() {
                         onError={(e) => {
                           console.error(`${integration.name} logo failed to load:`, integration.logo);
                           e.currentTarget.style.display = 'none';
-                          const fallback = e.currentTarget.parentElement?.querySelector('.fallback-text');
+                          const fallback = e.currentTarget.parentElement?.querySelector('.fallback-text') as HTMLElement;
                           if (fallback) fallback.style.display = 'block';
                         }}
                       />
@@ -499,7 +499,7 @@ export default function TechnologyPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-black mb-4">
-                  Can't Find Your Tool?
+                  Can&apos;t Find Your Tool?
                 </h2>
                 <p className="text-xl text-black mb-6">
                   We build custom integrations for any system, any platform, any API.
