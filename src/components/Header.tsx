@@ -11,7 +11,7 @@ export default function Header() {
   const pathname = usePathname();
   
   // Check if current page has white background
-  const isWhiteBackgroundPage = pathname === '/technology' || pathname === '/platform' || pathname === '/industries';
+  const isWhiteBackgroundPage = pathname === '/technology' || pathname === '/platform' || pathname === '/industries' || pathname === '/services';
 
   const navigationItems = [
     { 
@@ -23,6 +23,17 @@ export default function Header() {
         { name: 'Enterprise Automation', href: '/platform#automation' },
         { name: 'Custom Development', href: '/platform#development' },
         { name: 'Technology Stack', href: '/technology' }
+      ]
+    },
+    { 
+      name: 'Services', 
+      href: '/services',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Online Reputation Management', href: '/services' },
+        { name: 'Review Generation', href: '/services#review-generation' },
+        { name: 'SEO Reputation Management', href: '/services#seo-reputation' },
+        { name: 'Review Monitoring', href: '/services#review-monitoring' }
       ]
     },
     { 
