@@ -4,43 +4,161 @@ import { Star, TrendingUp, Shield, Users, Award, MessageSquare, Search, BarChart
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Head from 'next/head';
+import { useEffect } from 'react';
 
 export default function ServicesPage() {
+  // Add meta tags and structured data for SEO
+  useEffect(() => {
+    // Update page title
+    document.title = 'Google Review Service & Reviews Management | SEO Strategies to Drive Traffic | VATALIQUE';
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', 'Professional Google review service and reviews management with proven SEO strategies, social media campaigns, and email marketing to drive traffic and boost sales. Master digital marketing with expert online reputation management.');
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', 'Google review service, Google reviews management, online reputation management, SEO strategies, drive traffic, social media campaigns, email marketing, digital marketing, master digital marketing, drive sales');
+    
+    // Add Open Graph meta tags for social media
+    const ogTags = [
+      { property: 'og:title', content: 'Google Review Service & Reviews Management | Drive Traffic with SEO' },
+      { property: 'og:description', content: 'Master digital marketing with our Google reviews management, SEO strategies, social media campaigns, and email marketing that drive traffic and boost sales.' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://vatalique.com/services' },
+      { property: 'og:image', content: 'https://vatalique.com/images/VATALIQUE.png' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Google Review Service & Reviews Management | Drive Traffic with SEO' },
+      { name: 'twitter:description', content: 'Master digital marketing with proven SEO strategies, social media campaigns, and email marketing.' }
+    ];
+    
+    ogTags.forEach(tag => {
+      const attr = tag.property ? 'property' : 'name';
+      const attrValue = tag.property || tag.name || '';
+      if (!attrValue) return;
+      
+      let metaTag = document.querySelector(`meta[${attr}="${attrValue}"]`);
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute(attr, attrValue);
+        document.head.appendChild(metaTag);
+      }
+      metaTag.setAttribute('content', tag.content);
+    });
+    
+    // Add JSON-LD structured data for SEO
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "VATALIQUE - Google Review Service & Online Reputation Management",
+      "description": "Professional Google reviews management service with SEO strategies, social media campaigns, and email marketing to drive traffic and sales",
+      "url": "https://vatalique.com/services",
+      "logo": "https://vatalique.com/images/VATALIQUE.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "127"
+      },
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "serviceType": ["Google Review Service", "Google Reviews Management", "Online Reputation Management", "SEO Services", "Social Media Marketing", "Email Marketing", "Digital Marketing"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Reviews Management",
+              "description": "Professional Google review service with SEO strategies to drive traffic and boost rankings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO Strategies That Drive Traffic",
+              "description": "Comprehensive SEO strategies integrated with digital marketing to drive qualified traffic and sales"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social Media Campaign Management",
+              "description": "Strategic social media campaigns that drive traffic and engagement across all platforms"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Email Marketing Services",
+              "description": "Email marketing campaigns integrated with Google reviews management to drive conversions"
+            }
+          }
+        ]
+      }
+    };
+    
+    let scriptTag = document.querySelector('script[type="application/ld+json"]');
+    if (!scriptTag) {
+      scriptTag = document.createElement('script');
+      scriptTag.setAttribute('type', 'application/ld+json');
+      document.head.appendChild(scriptTag);
+    }
+    scriptTag.textContent = JSON.stringify(structuredData);
+  }, []);
   const benefits = [
     {
       icon: Users,
-      title: 'Appeal to High-Intent Prospects',
-      description: 'Customers are constantly evaluating their options. Approximately 97% of consumers report that business reviews influence their purchasing decisions. Internet reputation management allows you to amplify your positive business reviews across online platforms and position them in front of your target audience.',
+      title: 'Drive Traffic With Strategic SEO & Google Reviews',
+      description: 'Our Google review service uses SEO strategies to drive traffic and appeal to high-intent prospects. 97% of consumers rely on reviews for purchasing decisions. Our online reputation management amplifies positive Google reviews through targeted digital marketing, social media campaigns, and email marketing to drive qualified traffic to your business.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Star,
-      title: 'Generate Positive Business Reviews',
-      description: '92% of online users don\'t trust a brand without online reviews. What\'s more, 23% said they have difficulty making a purchase decision when there are no product reviews. A reputation manager builds a data-driven review generation strategy, ensuring your business has a steady flow of verified online reviews.',
+      title: 'Google Reviews Management for Higher Rankings',
+      description: '92% of users don\'t trust brands without online reviews. Our comprehensive Google reviews management service builds data-driven review generation strategies combined with SEO tactics that drive traffic, improve search rankings, and master digital marketing to ensure steady flow of verified reviews that boost sales.',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: TrendingUp,
-      title: 'Increase Customer Lifetime Value',
-      description: 'Selling to existing clients is 6-7 times cheaper than generating new customers. Brand reputation management offers a unique way to promote brand transparency and build trust with your clients, showcasing your commitment to customer satisfaction.',
+      title: 'Digital Marketing That Drives Sales & Conversions',
+      description: 'Mastering digital marketing through our integrated approach—combining Google review service, SEO strategies, social media campaigns, and email marketing—drives traffic 6-7x more cost-effectively. Our online reputation management showcases commitment to customers while executing campaigns that drive sales.',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Users,
-      title: 'Attract High-Performing Employees',
-      description: '69% of applicants would reject a job offer from a company with a negative reputation online. Internet reputation management allows you to gauge employee experience and gather actionable insights to improve your staff retention and acquisition strategies.',
+      title: 'Social Media Campaigns for Brand Authority',
+      description: '69% of applicants reject companies with negative online reputation. Our social media campaigns and comprehensive digital marketing strategies build strong employer brands. Combined with Google reviews management and SEO, we drive traffic from top talent while managing your online reputation.',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: BarChart,
-      title: 'Improve Your Bottom Line',
-      description: 'Online reviews increase conversions by 270%. Business reviews ramp up conversion rates of higher-priced products by up to 380%. With search engine reputation management, you can build better relationships with prospects and maximize conversion channels.',
+      title: 'Email Marketing & SEO That Drive Revenue',
+      description: 'Google reviews increase conversions by 270%! Our email marketing services combined with SEO strategies and Google reviews management create powerful campaigns that drive traffic and sales. Master digital marketing techniques proven to boost conversion rates by up to 380% through online reputation management.',
       color: 'from-red-500 to-pink-500'
     },
     {
       icon: Search,
-      title: 'Boost Your SEO Efforts',
-      description: 'Online reviews make up 15% of Google Local Pack ranking factors. By learning how to get more reviews on Google and other review sites, you generate more user-generated content (UGC), which drives qualified traffic and conversions to your landing pages.',
+      title: 'SEO Strategies That Drive Organic Traffic',
+      description: 'Online reviews drive 15% of Google Local Pack rankings. Our Google review service with advanced SEO strategies drives traffic through user-generated content. Master digital marketing by combining Google reviews management, social media campaigns, and email marketing for maximum organic traffic and conversions.',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
@@ -48,68 +166,68 @@ export default function ServicesPage() {
   const services = [
     {
       icon: Shield,
-      title: 'Reputation Management Software',
-      description: 'State-of-the-art reputation management software to facilitate your reputation management online and streamline your review marketing efforts. Our review software supports localized SMS and email campaigns at any scale, regular online reputation monitoring and social media reputation management across multiple locations.'
+      title: 'Google Reviews Management Software',
+      description: 'Advanced Google review service software with integrated digital marketing tools. Our platform combines Google reviews management with SEO strategies, social media campaigns, and email marketing to drive traffic at scale. Master digital marketing with our comprehensive online reputation management system that drives real sales.'
     },
     {
       icon: Shield,
-      title: 'Online Reputation Repair',
-      description: 'Our online reputation marketing expert repairs and mitigates damage from negative reviews by looking into their origins and providing solutions to fix them. We implement online reputation management SEO strategies and send requests to take down fake, offensive content related to your brand.'
+      title: 'Online Reputation Repair & SEO Recovery',
+      description: 'Expert Google reviews management repairs negative online reputation through proven SEO strategies that drive traffic back to positive content. Our digital marketing specialists implement targeted social media campaigns and email marketing to rebuild trust while mastering online reputation management techniques.'
     },
     {
       icon: Award,
-      title: 'White Label Reputation Management',
-      description: 'VATALIQUE offers white label reputation management solutions to improve your daily operations and help you focus on your core business. Get access to our software and brandable reputation management online reports you can use during client presentations and calls.'
+      title: 'White Label Digital Marketing Solutions',
+      description: 'VATALIQUE offers white label Google review service and online reputation management with complete digital marketing integration. Our SEO strategies, social media campaigns, and email marketing services drive traffic for your clients while you master digital marketing under your brand.'
     },
     {
       icon: MessageSquare,
-      title: 'Review Response',
-      description: 'Companies that provide a review response to at least 25% of their business reviews earn an additional 35% revenue. We analyze your customer sentiment and craft well-thought-out and sincere review responses that adopt your unique brand voice.'
+      title: 'Google Review Response Service',
+      description: 'Professional Google reviews management with strategic responses that drive traffic and boost SEO. Our online reputation management experts craft replies optimized for search engines. Companies using our Google review service earn 35% more revenue through better digital marketing and customer engagement.'
     },
     {
       icon: Search,
-      title: 'Review Monitoring',
-      description: 'We set up a program to monitor and alert you about new reviews, whether positive or negative, so you always know where your online reputation stands. We leverage our online reputation management software to speed up your online review monitoring process and integrate with 100+ major review sites.'
+      title: 'Review Monitoring with SEO Analytics',
+      description: 'Real-time Google reviews management monitoring integrated with SEO strategies to drive traffic. Our online reputation management software tracks 100+ platforms, executes social media campaigns, and triggers email marketing based on review alerts to master digital marketing performance.'
     },
     {
       icon: Star,
-      title: 'Review Generation',
-      description: 'Every additional one-star Yelp rating and customer review can increase your revenue by as high as 9%. Our review management team builds and implements an automated process and system to drive new, positive reviews for your business month-over-month (MoM).'
+      title: 'Google Review Generation & Traffic Growth',
+      description: 'Strategic Google review service that drives traffic and revenue. Our proven online reputation management system generates verified reviews while implementing SEO strategies, social media campaigns, and email marketing to master digital marketing and increase revenue by up to 9% per review.'
     },
     {
       icon: TrendingUp,
-      title: 'SEO Reputation Management',
-      description: 'Search engine reputation management involves promoting positive and desirable content and controlling the information accessible to the online community. We take care of everything – from on-site optimization and listing optimization to web reputation management.'
+      title: 'SEO Strategies That Drive Traffic & Sales',
+      description: 'Comprehensive SEO strategies integrated with Google reviews management to drive traffic and dominate search rankings. Our online reputation management combines technical SEO, content marketing, and digital marketing tactics. Master SEO strategies through social media campaigns and email marketing that convert.'
     },
     {
       icon: BarChart,
-      title: 'Survey Campaign Management',
-      description: 'Keep a pulse on your target audience and existing customers using our white label reputation management software. Our reputation monitoring team creates various types of customer satisfaction surveys to gather market insights and provide you with actionable insights.'
+      title: 'Social Media Campaign Management',
+      description: 'Strategic social media campaigns that drive traffic and amplify your Google review service. Our online reputation management integrates social platforms with SEO strategies and email marketing to master digital marketing. Data-driven campaigns that drive real traffic, engagement, and sales growth.'
     },
     {
       icon: Globe,
-      title: 'Online Product Reviews Management',
-      description: 'Propel your eCommerce business forward with VATALIQUE\'s online product reviews management service. We use smart online review management software to facilitate efficient review monitoring across your product listings on Amazon, Best Buy, Walmart, Target Plus and more.'
+      title: 'eCommerce Google Reviews Management',
+      description: 'Specialized Google review service for eCommerce businesses with SEO strategies to drive traffic across Amazon, Walmart, and more. Our online reputation management combines product reviews with social media campaigns and email marketing to master digital marketing and boost conversion rates.'
     },
     {
       icon: CheckCircle,
-      title: 'Business Listings Management',
-      description: 'Outsource your manual citation management tasks to our reputation management company and save time, effort and money. We perform regular business listings audits to ensure all your brand information across local citations is SEO-optimized and up-to-date.'
+      title: 'Local SEO & Business Listings',
+      description: 'Google reviews management integrated with local SEO strategies that drive traffic from nearby customers. Our online reputation management optimizes citations while executing targeted social media campaigns and email marketing to master digital marketing in your local market and increase foot traffic.'
     },
     {
       icon: Mail,
-      title: 'Email Marketing',
-      description: 'Reach out to your best customers at the right moment with automated SMS marketing and email marketing services. We create personalized email and SMS review request templates to help you gain more customer reviews and launch targeted reputation management campaigns.'
+      title: 'Email Marketing Services That Convert',
+      description: 'Strategic email marketing campaigns integrated with Google review service and online reputation management. Our SEO-optimized templates drive traffic through automated sequences. Master digital marketing by combining email campaigns with social media strategies and Google reviews management to boost sales.'
     },
     {
       icon: QrCode,
-      title: 'QR Codes',
-      description: 'Our corporate online reputation management agency makes it easy for you to generate reviews with QR codes. We create customized QR codes within one day – free of charge! Simply send the QR code to your client or have them scan it for reviews where it is convenient.'
+      title: 'QR Code Review Generation',
+      description: 'Innovative Google review service using QR codes with integrated digital marketing tracking. Our online reputation management creates custom QR codes that drive traffic to review sites while triggering email marketing and social media campaigns to master digital marketing conversion funnels.'
     },
     {
       icon: Smartphone,
-      title: 'Two-Way SMS',
-      description: 'Leverage two-way SMS marketing to launch review generation and customer survey campaigns and build a robust relationship with your target audience. Our two-way text messaging service allows you to strike up a conversation with your customers and provide a better customer experience.'
+      title: 'SMS Marketing & Review Campaigns',
+      description: 'Two-way SMS marketing integrated with Google reviews management to drive traffic and engagement. Our online reputation management combines text campaigns with SEO strategies, social media, and email marketing to master digital marketing across all channels and maximize review generation.'
     }
   ];
 
@@ -188,33 +306,33 @@ export default function ServicesPage() {
   const whyChoose = [
     {
       icon: Star,
-      title: 'Tailored Reputation Marketing Services',
-      description: 'We believe there is no one-size-fits-all approach to brand reputation management. Our team performs in-depth market research and campaign analysis to create custom online reputation services that meet your needs and industry standards.'
+      title: 'Custom Google Review Service & SEO Plans',
+      description: 'Tailored Google reviews management with integrated digital marketing strategies. Our SEO-driven approach combines social media campaigns and email marketing to drive traffic specific to your industry. Master digital marketing with custom online reputation management strategies that deliver measurable results.'
     },
     {
       icon: BarChart,
-      title: 'Comprehensive Monthly Reports',
-      description: 'We treat all our clients as partners in business reputation management. We give you access to our reputation management tools, dashboard and campaign reports so you can track your online reviews anytime, anywhere.'
+      title: 'Real-Time Digital Marketing Analytics',
+      description: 'Comprehensive reporting for Google review service, SEO performance, social media campaigns, and email marketing. Track how our online reputation management drives traffic and sales. Master digital marketing insights with dashboards showing ROI from every channel and campaign.'
     },
     {
       icon: Users,
-      title: 'Dedicated Account Manager',
-      description: 'We assign a dedicated reputation manager to handle your online review monitoring and reputation management campaign. You have a single point of contact for all your campaign concerns with support available on weekends and holidays.'
+      title: 'Dedicated Digital Marketing Team',
+      description: 'Expert team handling Google reviews management, SEO strategies, social media campaigns, and email marketing to drive traffic 24/7. Your dedicated online reputation management specialist helps you master digital marketing with personalized support and strategic guidance.'
     },
     {
       icon: Shield,
-      title: 'Robust Reputation Management Tools',
-      description: 'We leverage advanced online reputation management tools that streamline processes. As one of the most trusted review management companies, we ensure these tools have undergone a strict testing process.'
+      title: 'Advanced SEO & Marketing Tools',
+      description: 'Industry-leading Google review service platform integrated with SEO tools that drive traffic. Our online reputation management software combines social media campaign management and email marketing automation to help you master digital marketing with cutting-edge technology.'
     },
     {
       icon: Globe,
-      title: 'Diverse Industry Expertise',
-      description: 'No matter your niche expertise, we can help you. VATALIQUE is one of the few reputation management agencies that provide online reputation services for thousands of businesses from across industries.'
+      title: 'Multi-Industry Digital Marketing Expertise',
+      description: 'Proven Google reviews management and SEO strategies that drive traffic across all industries. Our online reputation management team masters digital marketing for healthcare, retail, restaurants, professional services with specialized social media campaigns and email marketing.'
     },
     {
       icon: TrendingUp,
-      title: 'Smart Reputation Management Strategy',
-      description: 'To repair a poor online reputation and maintain a positive brand image, you need data-driven online reputation management solutions. We perform extensive reputation analysis to determine the current state of your online image.'
+      title: 'Data-Driven Strategies That Drive Results',
+      description: 'Strategic Google review service backed by analytics. Our online reputation management uses SEO data, social media insights, and email marketing metrics to drive traffic and conversions. Master digital marketing through proven strategies that consistently deliver growth and ROI.'
     }
   ];
 
@@ -226,16 +344,16 @@ export default function ServicesPage() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block mb-6 px-4 py-2 bg-ada-pink/10 backdrop-blur-md rounded-full border border-ada-pink/20">
-            <span className="text-ada-pink font-semibold">ONLINE REPUTATION MANAGEMENT</span>
+            <span className="text-ada-pink font-semibold">GOOGLE REVIEWS MANAGEMENT & ONLINE REPUTATION MANAGEMENT</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Gain Customer Trust and
+            Google Review Service & Online Reputation Management to
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-ada-pink to-purple-600">
-              Propel Your Brand Success
+              Drive Traffic and Boost Sales
             </span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Build a positive reputation that matches your vision and goals. Take charge of your reputation online and establish your brand as a market leader.
+            Professional Google reviews management service with proven SEO strategies, social media campaigns, and email marketing to drive traffic, increase conversions, and establish your brand as a market leader through expert online reputation management.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
             <Link
@@ -261,19 +379,19 @@ export default function ServicesPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Is Your Business Represented Fairly Online?
+                Google Review Service & Online Reputation Management That Drives Real Results
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                A company's online reputation is responsible for at least half its market value. Statistics show nine out of 10 consumers read online reviews before making a purchase and nearly 62% will not buy from a company that censors business reviews. Furthermore, brands that receive only one or two stars on review platforms such as Yelp or Google risk losing 86% of their prospects.
+                Our Google reviews management service transforms your online reputation through strategic SEO, targeted social media campaigns, and data-driven email marketing. Statistics show nine out of 10 consumers read online reviews before making a purchase, and effective digital marketing with proper Google review service can drive traffic and increase your market value by over 50%.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
-                Don't let a single negative comment or fake customer review ruin your reputation online. Capitalize on goal-driven business reputation services and learn how to get more reviews on Google and other platforms.
+                Don't let negative reviews hurt your search rankings. Our comprehensive online reputation management combines SEO strategies with Google reviews management to drive traffic, boost conversions, and establish your brand dominance through proven digital marketing techniques.
               </p>
             </div>
             <div className="flex justify-center">
               <img 
                 src="https://cdn-icggj.nitrocdn.com/AphBmykuaGyxZijWArNhxcCiPzVdYZGT/assets/images/optimized/rev-0b6ac08/thriveagency.com/files/business-represented.svg" 
-                alt="Business represented online with 5-star reviews" 
+                alt="Google review service and online reputation management with 5-star reviews driving traffic and sales" 
                 className="w-full max-w-lg h-auto object-contain"
               />
             </div>
@@ -285,8 +403,8 @@ export default function ServicesPage() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Numbers Don't Lie</h2>
-            <p className="text-xl text-gray-700">Online reputation directly impacts your bottom line</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Google Reviews Management & SEO Drive Traffic and Sales</h2>
+            <p className="text-xl text-gray-700">Online reputation management with strategic digital marketing directly impacts your bottom line</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -307,20 +425,20 @@ export default function ServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Is Reputation Management?</h2>
-            <p className="text-xl text-gray-700">Make a Great First Impression With Your Target Audience</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Is Google Reviews Management & Online Reputation Management?</h2>
+            <p className="text-xl text-gray-700">Digital Marketing Services That Drive Traffic Through SEO, Social Media & Email Campaigns</p>
           </div>
 
           <div className="bg-gray-50 rounded-3xl p-10 border border-gray-200 shadow-lg">
             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              Your online reputation serves as a trust signal that determines if prospects will do business with you. According to a study by the University of Technology Sydney, the majority of consumers are willing to pay more for a product or service from a company with a stellar reputation online.
+              Our Google review service combines strategic online reputation management with proven digital marketing techniques to drive traffic and boost sales. By mastering SEO strategies, executing targeted social media campaigns, and implementing effective email marketing, we help your business dominate search rankings and convert more customers.
             </p>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Reputation management is the practice of safeguarding the online reputation of an individual, company or organization to shape public perception. Internet reputation management ensures online users and search engines find the right materials when they search for your brand online.
+              Online reputation management integrates Google reviews management with comprehensive digital marketing to control your online presence. Our SEO-driven approach ensures search engines and customers find positive content about your brand, while our social media campaigns and email marketing strategies actively drive traffic to your website and convert visitors into loyal customers.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {['Review generation', 'Reputation monitoring', 'Review marketing', 'Online reputation repair', 'Survey campaign management', 'Search engine optimization (SEO) reputation management'].map((item, index) => (
+              {['Google review service', 'Google reviews management', 'SEO strategies to drive traffic', 'Social media campaigns', 'Email marketing services', 'Online reputation management', 'Digital marketing for sales', 'Traffic-driving SEO tactics'].map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-ada-pink flex-shrink-0" />
                   <span className="text-gray-900">{item}</span>
@@ -335,8 +453,8 @@ export default function ServicesPage() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Your Business Needs Reputation Management</h2>
-            <p className="text-xl text-gray-700">Stay on Top of Your Brand Mentions and Search Results</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Google Reviews Management Drives Traffic and Boosts Sales</h2>
+            <p className="text-xl text-gray-700">Master Digital Marketing With SEO, Social Media Campaigns & Email Marketing</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -363,16 +481,16 @@ export default function ServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Consequences of a Poor Reputation Online</h2>
-            <p className="text-xl text-gray-700 mb-8">Can a business really afford to ignore search engine reputation management?</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Google Reviews Management & Digital Marketing Are Crucial</h2>
+            <p className="text-xl text-gray-700 mb-8">Without proper SEO strategies, social media campaigns, and email marketing to drive traffic, businesses lose customers daily</p>
           </div>
 
           <div className="bg-gray-50 rounded-3xl p-10 border border-gray-200 shadow-lg">
             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              All it takes is one dissatisfied customer to negatively impact your brand's online reputation. Orders, bookings and subscriptions run the risk of being canceled if negative online reviews plague your online profiles. These can ripple through all your marketing efforts, affecting more than just your sales.
+              Without professional Google review service and online reputation management, negative reviews destroy your digital marketing efforts. Poor Google reviews management means failed SEO strategies that can't drive traffic, ineffective social media campaigns, and email marketing that converts poorly. Master digital marketing with our comprehensive approach to prevent reputation disasters.
             </p>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Additionally, a poor company reputation management strategy can lead to:
+              Ignoring Google reviews management and failing to implement SEO strategies to drive traffic leads to:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -431,7 +549,7 @@ export default function ServicesPage() {
             </div>
 
             <p className="text-xl text-gray-700 leading-relaxed">
-              Your business's online reputation is important, so make sure you are working with a reputation management company that is committed to making a difference. Contact VATALIQUE today to learn how to get more reviews and improve your SEO reputation management strategy.
+              Your business needs professional Google reviews management and strategic online reputation management. Contact VATALIQUE today to master digital marketing with our proven SEO strategies, social media campaigns, and email marketing services that drive traffic, boost sales, and transform your online presence with expert Google review service.
             </p>
           </div>
         </div>
@@ -443,19 +561,19 @@ export default function ServicesPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                What Does Your Online Reputation Look Like?
+                Google Review Service & SEO Strategies That Drive Traffic
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Win Back Unhappy Customers and Boost Your Client Retention Rate
+                Master Digital Marketing With Proven Online Reputation Management Techniques
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Many businesses treat digital marketing as a set-and-forget way of building an online reputation. However, online marketing entails more than launching local SEO and social media marketing campaigns.
+                Many businesses fail at digital marketing because they don't integrate Google reviews management with comprehensive SEO strategies. Effective online reputation management requires mastering digital marketing—combining Google review service with social media campaigns and email marketing to consistently drive traffic and sales.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Even if you have a robust digital marketing strategy in place, you still run the risk of increasing your customer churn by 15% if you don't engage actively with your customers. Moreover, no matter how many followers you have on social media, unless you respond to customer reviews, your followers will only see you as a business page looking to earn profits.
+                Without proper Google reviews management and strategic online reputation management, customer churn increases by 15%. Our digital marketing services—including targeted social media campaigns, email marketing, and SEO strategies—actively drive traffic while engaging customers. Master digital marketing by responding to reviews and executing campaigns that drive real sales.
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                What does your online reputation say about your company? Does your corporate online reputation management strategy bring profit or do more harm than good to your business?
+                Is your Google review service driving traffic? Are your SEO strategies and social media campaigns generating sales? Our online reputation management combines proven digital marketing techniques and email marketing to drive qualified traffic that converts.
               </p>
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -475,7 +593,7 @@ export default function ServicesPage() {
             <div className="flex justify-center">
               <img 
                 src="https://cdn-icggj.nitrocdn.com/AphBmykuaGyxZijWArNhxcCiPzVdYZGT/assets/images/optimized/rev-0b6ac08/thriveagency.com/files/reputationlook.svg" 
-                alt="Woman with 5-star rating representing online reputation" 
+                alt="Google reviews management and SEO strategies driving traffic for online reputation management success" 
                 className="w-full max-w-lg h-auto object-contain"
               />
             </div>
@@ -527,8 +645,8 @@ export default function ServicesPage() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Online Reputation Services</h2>
-            <p className="text-xl text-gray-700">Extend Beyond Generating Positive Customer Reviews</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Google Review Service & Digital Marketing Solutions That Drive Traffic</h2>
+            <p className="text-xl text-gray-700">Master Online Reputation Management With SEO, Social Media & Email Marketing</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -586,8 +704,8 @@ export default function ServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose VATALIQUE for Reputation Management</h2>
-            <p className="text-xl text-gray-700">Get Professional Solutions That Drive Business Growth</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose VATALIQUE for Google Reviews Management & Digital Marketing</h2>
+            <p className="text-xl text-gray-700">Master SEO Strategies, Social Media Campaigns & Email Marketing That Drive Traffic</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -610,7 +728,7 @@ export default function ServicesPage() {
 
           <div className="mt-12 text-center bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-lg">
             <p className="text-xl text-gray-700">
-              In 2020, Neil Patel acknowledged our reputation marketing firm as the <span className="text-ada-pink font-bold">third-best online reputation management company in the world</span>. This recognition speaks volumes about the quality of our reputation marketing services.
+              In 2020, Neil Patel recognized our Google review service and online reputation management as the <span className="text-ada-pink font-bold">third-best in the world</span>. Our proven digital marketing expertise—combining SEO strategies, social media campaigns, and email marketing that drive traffic—has helped thousands master digital marketing and achieve exceptional business growth.
             </p>
           </div>
         </div>
@@ -620,16 +738,16 @@ export default function ServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto bg-gradient-to-r from-ada-pink to-purple-600 rounded-3xl p-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Begin Your Reputation Management Today
+            Start Driving Traffic With Google Reviews Management Today
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Get More 5-Star Reviews, Earn More Online Trust
+            Master Digital Marketing With Our SEO Strategies, Social Media Campaigns & Email Marketing That Drive Sales
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-white text-ada-pink px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-200 font-semibold text-lg"
           >
-            Schedule Your Free Demo
+            Get Your Free Google Review Service Demo
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
