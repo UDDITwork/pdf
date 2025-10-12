@@ -259,7 +259,7 @@ export default function CustomersPage() {
 
                   {/* Testimonial */}
                   <div className="bg-white/5 rounded-xl p-4 mb-4">
-                    <p className="text-gray-300 text-sm italic mb-3">"{study.testimonial}"</p>
+                    <p className="text-gray-300 text-sm italic mb-3">&ldquo;{study.testimonial}&rdquo;</p>
                     <div className="text-sm">
                       <div className="text-white font-semibold">{study.author}</div>
                       <div className="text-gray-400 text-xs">{study.role}</div>

@@ -10,7 +10,7 @@ export default function TestimonialCard({ quote, author, role, company, image }:
   return (
     <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-ada-pink/50 transition-all duration-300">
       <div className="flex items-start gap-4 mb-6">
-        <div className="text-6xl text-ada-pink leading-none">"</div>
+        <div className="text-6xl text-ada-pink leading-none">&ldquo;</div>
         <p className="text-gray-300 text-lg italic leading-relaxed pt-4">{quote}</p>
       </div>
       
