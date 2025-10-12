@@ -67,7 +67,7 @@ export default function Header() {
   ];
 
       return (
-        <header className={`${isWhiteBackgroundPage ? 'bg-gray-900/10 backdrop-blur-md shadow-lg border border-gray-200' : 'bg-white/10 backdrop-blur-md shadow-lg border border-white/30'} rounded-2xl mx-8 mt-8 z-50 relative`}>
+        <header className={`${isWhiteBackgroundPage ? 'bg-gray-900/10 backdrop-blur-md shadow-lg border border-gray-200' : 'bg-white/10 backdrop-blur-md shadow-lg border border-white/30'} rounded-2xl mx-8 mt-8 relative`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
