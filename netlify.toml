@@ -1,8 +1,8 @@
 [build]
   # Build command for Next.js
   command = "npm run build"
-  # Leave publish empty - the Next.js plugin handles this
-  publish = ""
+  # Publish directory for Next.js
+  publish = ".next"
 
 # Plugin configuration for Next.js
 [[plugins]]
