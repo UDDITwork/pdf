@@ -59,7 +59,7 @@ export default function ServicesPage() {
     {
       icon: Award,
       title: 'White Label Reputation Management',
-      description: 'Thrive Local offers white label reputation management solutions to improve your daily operations and help you focus on your core business. Get access to our software and brandable reputation management online reports you can use during client presentations and calls.'
+      description: 'VATALIQUE offers white label reputation management solutions to improve your daily operations and help you focus on your core business. Get access to our software and brandable reputation management online reports you can use during client presentations and calls.'
     },
     {
       icon: MessageSquare,
@@ -89,7 +89,7 @@ export default function ServicesPage() {
     {
       icon: Globe,
       title: 'Online Product Reviews Management',
-      description: 'Propel your eCommerce business forward with Thrive Local\'s online product reviews management service. We use smart online review management software to facilitate efficient review monitoring across your product listings on Amazon, Best Buy, Walmart, Target Plus and more.'
+      description: 'Propel your eCommerce business forward with VATALIQUE\'s online product reviews management service. We use smart online review management software to facilitate efficient review monitoring across your product listings on Amazon, Best Buy, Walmart, Target Plus and more.'
     },
     {
       icon: CheckCircle,
@@ -171,7 +171,7 @@ export default function ServicesPage() {
     {
       icon: Globe,
       title: 'Diverse Industry Expertise',
-      description: 'No matter your niche expertise, we can help you. Thrive Local is one of the few reputation management agencies that provide online reputation services for thousands of businesses from across industries.'
+      description: 'No matter your niche expertise, we can help you. VATALIQUE is one of the few reputation management agencies that provide online reputation services for thousands of businesses from across industries.'
     },
     {
       icon: TrendingUp,
@@ -355,7 +355,7 @@ export default function ServicesPage() {
           <div className="mt-12 bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-lg">
             <p className="text-lg text-gray-700 italic leading-relaxed">
               <span className="text-ada-pink font-semibold">From Pogo Energy Vice President Eric M.:</span><br />
-              "I couldn't be happier with choosing [Thrive Local]. We use them in an ongoing way and also monthly to help encourage our customers to provide us feedback on public reviews. Thrive Local creates an easy way for my customers to provide feedback to my company and to the general public. We were consistently told in private surveys that our customers loved us, but we didn't have a good/easy way for them to transfer their strong, positive opinions to Google and Facebook. Thrive Local helped us achieve over 1,000 reviews in a few short months."
+              "I couldn't be happier with choosing [VATALIQUE]. We use them in an ongoing way and also monthly to help encourage our customers to provide us feedback on public reviews. VATALIQUE creates an easy way for my customers to provide feedback to my company and to the general public. We were consistently told in private surveys that our customers loved us, but we didn't have a good/easy way for them to transfer their strong, positive opinions to Google and Facebook. VATALIQUE helped us achieve over 1,000 reviews in a few short months."
             </p>
           </div>
         </div>
@@ -391,7 +391,7 @@ export default function ServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Thrive Local for Reputation Management</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose VATALIQUE for Reputation Management</h2>
             <p className="text-xl text-gray-700">Get Professional Solutions That Drive Business Growth</p>
           </div>
 
