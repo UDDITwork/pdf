@@ -1,9 +1,6 @@
 [build]
   # Build command for Next.js
   command = "npm run build"
-  
-  # Directory to publish (Next.js output directory)
-  publish = ".next"
 
 # Plugin configuration for Next.js
 [[plugins]]
@@ -31,5 +28,4 @@
 
 # Environment variables (add your own as needed)
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_VERSION = "9"
+  NODE_VERSION = "20"

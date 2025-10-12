@@ -285,7 +285,7 @@ export default function CustomersPage() {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join 500+ enterprises who've transformed their operations with AI
+            Join 500+ enterprises who&apos;ve transformed their operations with AI
           </p>
           <button className="bg-white text-ada-pink px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-200 flex items-center gap-2 font-semibold text-lg mx-auto">
             Start Your Journey
