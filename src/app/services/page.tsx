@@ -147,6 +147,44 @@ export default function ServicesPage() {
     { number: '86%', label: 'of prospects lost with 1-2 star ratings' }
   ];
 
+  const testimonials = [
+    {
+      name: 'Rishav',
+      location: 'Begusarai, Bihar',
+      phone: '8936013767',
+      quote: 'VATALIQUE transformed our online presence completely. Within just 3 months, we saw a 300% increase in positive reviews and our Google rating improved from 3.2 to 4.8 stars. The team\'s expertise in reputation management is unmatched.',
+      rating: 5
+    },
+    {
+      name: 'Kartikey Sharma',
+      location: 'Jaipur, India (K Square Classes Coaching Services)',
+      phone: '6367128700',
+      quote: 'As a coaching institute, our reputation is everything. VATALIQUE helped us build trust with parents and students by managing our online reviews professionally. Our enrollment increased by 150% after implementing their reputation management strategy.',
+      rating: 5
+    },
+    {
+      name: 'Mehul Sharma',
+      location: 'Jodhpur, India (Bus Services)',
+      phone: '7877387228',
+      quote: 'Running a bus service company, customer trust is crucial for our business. VATALIQUE\'s reputation management services helped us address negative feedback effectively and showcase our positive customer experiences. Our booking rates have doubled.',
+      rating: 5
+    },
+    {
+      name: 'Ankit Kumar',
+      location: 'Delhi, India',
+      phone: '7456886877',
+      quote: 'The team at VATALIQUE is exceptional. They not only helped us recover from a reputation crisis but also built a robust system to maintain positive reviews. Our customer satisfaction scores have never been higher.',
+      rating: 5
+    },
+    {
+      name: 'Priya Singh',
+      location: 'Mumbai, India',
+      phone: '8368824707',
+      quote: 'VATALIQUE\'s white-label reputation management solution has been a game-changer for our agency. We can now offer comprehensive reputation services to our clients with professional reporting and excellent results.',
+      rating: 5
+    }
+  ];
+
   const whyChoose = [
     {
       icon: Star,
@@ -507,6 +545,39 @@ export default function ServicesPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Client Testimonials */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-700">Real testimonials from businesses that transformed their online reputation</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-ada-pink hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-gray-700 mb-6 italic leading-relaxed">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="font-bold text-gray-900">{testimonial.name}</div>
+                  <div className="text-gray-600 text-sm">{testimonial.location}</div>
+                  <div className="text-ada-pink text-sm font-medium">{testimonial.phone}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
