@@ -321,6 +321,130 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Consequences of Poor Reputation */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Consequences of a Poor Reputation Online</h2>
+            <p className="text-xl text-gray-700 mb-8">Can a business really afford to ignore search engine reputation management?</p>
+          </div>
+
+          <div className="bg-gray-50 rounded-3xl p-10 border border-gray-200 shadow-lg">
+            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+              All it takes is one dissatisfied customer to negatively impact your brand's online reputation. Orders, bookings and subscriptions run the risk of being canceled if negative online reviews plague your online profiles. These can ripple through all your marketing efforts, affecting more than just your sales.
+            </p>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              Additionally, a poor company reputation management strategy can lead to:
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Low search engine rankings</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Loss of revenue</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Decreased profitability</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Damaged brand reputation</span>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Diminished trust</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Increased marketing expenses</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Low customer engagement</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-sm font-bold">×</span>
+                  </div>
+                  <span className="text-lg text-gray-900">Reduced customer and employee retention rate</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-xl text-gray-700 leading-relaxed">
+              Your business's online reputation is important, so make sure you are working with a reputation management company that is committed to making a difference. Contact VATALIQUE today to learn how to get more reviews and improve your SEO reputation management strategy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What Does Your Online Reputation Look Like */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                What Does Your Online Reputation Look Like?
+              </h2>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                Win Back Unhappy Customers and Boost Your Client Retention Rate
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Many businesses treat digital marketing as a set-and-forget way of building an online reputation. However, online marketing entails more than launching local SEO and social media marketing campaigns.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Even if you have a robust digital marketing strategy in place, you still run the risk of increasing your customer churn by 15% if you don't engage actively with your customers. Moreover, no matter how many followers you have on social media, unless you respond to customer reviews, your followers will only see you as a business page looking to earn profits.
+              </p>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                What does your online reputation say about your company? Does your corporate online reputation management strategy bring profit or do more harm than good to your business?
+              </p>
+              <div className="space-y-4">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  <span className="font-bold">Synup's recent State of Retail report revealed that a whopping 82% of consumers would not transact with a retailer with less than 3 stars.</span>
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  A BrightLocal survey also found that online users read 10 or fewer online reviews before making a decision.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Nearly 23% of consumers consider online reviews that are no more than two weeks old as credible online resources.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Only 14% of people transact with a business with a 1- or 2-star rating.
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://cdn-icggj.nitrocdn.com/AphBmykuaGyxZijWArNhxcCiPzVdYZGT/assets/images/optimized/rev-0b6ac08/thriveagency.com/files/reputationlook.svg" 
+                alt="Woman with 5-star rating representing online reputation" 
+                className="w-full max-w-lg h-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
