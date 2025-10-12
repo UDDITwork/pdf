@@ -199,29 +199,46 @@ export default function ServicesPage() {
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
             Build a positive reputation that matches your vision and goals. Take charge of your reputation online and establish your brand as a market leader.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-ada-pink text-white px-8 py-4 rounded-full hover:bg-pink-600 transition-all duration-200 font-semibold text-lg"
-          >
-            Get My Free Demo
-            <ArrowRight className="h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-ada-pink text-white px-8 py-4 rounded-full hover:bg-pink-600 transition-all duration-200 font-semibold text-lg"
+            >
+              Get My Free Demo
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+            <div className="text-center sm:text-left">
+              <p className="text-gray-600 text-sm">Or call us directly:</p>
+              <a href="tel:9569253552" className="text-2xl font-bold text-ada-pink hover:text-pink-600 transition-colors">
+                9569253552
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Problem Statement */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gray-50 rounded-3xl p-10 border border-gray-200 text-center shadow-lg">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Is Your Business Represented Fairly Online?
-            </h2>
-            <p className="text-xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
-              A company's online reputation is responsible for at least half its market value. Statistics show nine out of 10 consumers read online reviews before making a purchase and nearly 62% will not buy from a company that censors business reviews. Furthermore, brands that receive only one or two stars on review platforms such as Yelp or Google risk losing 86% of their prospects.
-            </p>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Don't let a single negative comment or fake customer review ruin your reputation online. Capitalize on goal-driven business reputation services and learn how to get more reviews on Google and other platforms.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Is Your Business Represented Fairly Online?
+              </h2>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                A company's online reputation is responsible for at least half its market value. Statistics show nine out of 10 consumers read online reviews before making a purchase and nearly 62% will not buy from a company that censors business reviews. Furthermore, brands that receive only one or two stars on review platforms such as Yelp or Google risk losing 86% of their prospects.
+              </p>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Don't let a single negative comment or fake customer review ruin your reputation online. Capitalize on goal-driven business reputation services and learn how to get more reviews on Google and other platforms.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://cdn-icggj.nitrocdn.com/AphBmykuaGyxZijWArNhxcCiPzVdYZGT/assets/images/optimized/rev-0b6ac08/thriveagency.com/files/business-represented.svg" 
+                alt="Business represented online with 5-star reviews" 
+                className="w-full max-w-lg h-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
