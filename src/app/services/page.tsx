@@ -373,28 +373,187 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Problem Statement */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Google Review Service & Online Reputation Management That Drives Real Results
-              </h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Our Google reviews management service transforms your online reputation through strategic SEO, targeted social media campaigns, and data-driven email marketing. Statistics show nine out of 10 consumers read online reviews before making a purchase, and effective digital marketing with proper Google review service can drive traffic and increase your market value by over 50%.
-              </p>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Don't let negative reviews hurt your search rankings. Our comprehensive online reputation management combines SEO strategies with Google reviews management to drive traffic, boost conversions, and establish your brand dominance through proven digital marketing techniques.
-              </p>
+      {/* AI Platform Control Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-ada-pink/5 to-purple-600/5"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-ada-pink to-purple-600 rounded-full text-white font-bold text-lg animate-pulse">
+              🚀 AI REPUTATION CONTROL
             </div>
-            <div className="flex justify-center">
-              <img 
-                src="https://cdn-icggj.nitrocdn.com/AphBmykuaGyxZijWArNhxcCiPzVdYZGT/assets/images/optimized/rev-0b6ac08/thriveagency.com/files/business-represented.svg" 
-                alt="Google review service and online reputation management with 5-star reviews driving traffic and sales" 
-                className="w-full max-w-lg h-auto object-contain"
-              />
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
+              Control <span className="text-transparent bg-clip-text bg-gradient-to-r from-ada-pink to-purple-600">CHATGPT</span> to Force It to Say About You the Way You Want!
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed animate-slide-up">
+              Build powerful AI reputation control across ChatGPT, Google, Gemini, Perplexity, Bing, Reddit, Quora, Twitter and all major platforms. VATALIQUE helps you control the narrative and perspective of your company across every AI platform.
+            </p>
+          </div>
+
+          {/* Platform Logos with Animations */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Control Your Narrative Across All Platforms</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center justify-items-center">
+              {/* ChatGPT */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300">
+                <img 
+                  src="https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A" 
+                  alt="ChatGPT Logo" 
+                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                />
+                <p className="text-xs font-semibold mt-2 text-gray-700">ChatGPT</p>
+              </div>
+
+              {/* Google */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.1s'}}>
+                <img 
+                  src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" 
+                  alt="Google Logo" 
+                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                />
+                <p className="text-xs font-semibold mt-2 text-gray-700">Google</p>
+              </div>
+
+              {/* Gemini */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.2s'}}>
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Google_Gemini_logo_2025.svg/2560px-Google_Gemini_logo_2025.svg.png" 
+                  alt="Google Gemini Logo" 
+                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                />
+                <p className="text-xs font-semibold mt-2 text-gray-700">Gemini</p>
+              </div>
+
+              {/* Perplexity */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.3s'}}>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">P</span>
+                </div>
+                <p className="text-xs font-semibold mt-2 text-gray-700">Perplexity</p>
+              </div>
+
+              {/* Bing */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.4s'}}>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">B</span>
+                </div>
+                <p className="text-xs font-semibold mt-2 text-gray-700">Bing</p>
+              </div>
+
+              {/* Reddit */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.5s'}}>
+                <img 
+                  src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/8612/Reddit_Lockup_3x-19c80010-89b1-4474-b437-a33e29130a9f.png" 
+                  alt="Reddit Logo" 
+                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                />
+                <p className="text-xs font-semibold mt-2 text-gray-700">Reddit</p>
+              </div>
+
+              {/* Quora */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.6s'}}>
+                <img 
+                  src="https://download.logo.wine/logo/Quora/Quora-Logo.wine.png" 
+                  alt="Quora Logo" 
+                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                />
+                <p className="text-xs font-semibold mt-2 text-gray-700">Quora</p>
+              </div>
+
+              {/* Twitter */}
+              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.7s'}}>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">𝕏</span>
+                </div>
+                <p className="text-xs font-semibold mt-2 text-gray-700">Twitter/X</p>
+              </div>
             </div>
+          </div>
+
+          {/* Dynamic Charts Section */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* AI Platform Control Chart */}
+            <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 animate-slide-up">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">AI Platform Control</h3>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">ChatGPT Influence</span>
+                  <span className="text-sm font-bold text-ada-pink">95%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="bg-gradient-to-r from-ada-pink to-purple-600 h-3 rounded-full animate-loading-bar" style={{width: '95%', animationDelay: '0.5s'}}></div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">Google Search</span>
+                  <span className="text-sm font-bold text-green-600">88%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-600 h-3 rounded-full animate-loading-bar" style={{width: '88%', animationDelay: '1s'}}></div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">Social Media</span>
+                  <span className="text-sm font-bold text-blue-600">92%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="bg-gradient-to-r from-blue-500 to-cyan-600 h-3 rounded-full animate-loading-bar" style={{width: '92%', animationDelay: '1.5s'}}></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Reputation Impact Pie Chart */}
+            <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 animate-slide-up" style={{animationDelay: '0.2s'}}>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Reputation Impact</h3>
+              <div className="relative w-32 h-32 mx-auto mb-4">
+                <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" strokeWidth="8" fill="none"/>
+                  <circle cx="50" cy="50" r="40" stroke="url(#gradient1)" strokeWidth="8" fill="none" 
+                    strokeDasharray="251.2" strokeDashoffset="50.24" className="animate-pie-chart"/>
+                  <defs>
+                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#ec4899"/>
+                      <stop offset="100%" stopColor="#8b5cf6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-ada-pink">80%</span>
+                </div>
+              </div>
+              <p className="text-center text-sm text-gray-600">Positive Mentions</p>
+            </div>
+
+            {/* Growth Metrics */}
+            <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 animate-slide-up" style={{animationDelay: '0.4s'}}>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Growth Metrics</h3>
+              <div className="space-y-4">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-ada-pink animate-count-up">+340%</div>
+                  <div className="text-sm text-gray-600">AI Search Visibility</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 animate-count-up" style={{animationDelay: '0.5s'}}>+280%</div>
+                  <div className="text-sm text-gray-600">Brand Mentions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 animate-count-up" style={{animationDelay: '1s'}}>+195%</div>
+                  <div className="text-sm text-gray-600">Positive Sentiment</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center bg-gradient-to-r from-ada-pink to-purple-600 rounded-3xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">Ready to Control Your AI Reputation?</h3>
+            <p className="text-xl mb-6 opacity-90">Let VATALIQUE help you dominate ChatGPT, Google, and all AI platforms with strategic reputation management.</p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-ada-pink px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-200 font-semibold text-lg hover:scale-105 transform"
+            >
+              Start Controlling AI Narratives Now
+              <ArrowRight className="h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>

@@ -2,6 +2,196 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Animations for VATALIQUE AI Platform Control Section */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Bounce Slow Animation */
+@keyframes bounceSlow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 3s infinite;
+}
+
+/* Loading Bar Animation */
+@keyframes loadingBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--target-width, 100%);
+  }
+}
+
+.animate-loading-bar {
+  animation: loadingBar 2s ease-out forwards;
+  animation-delay: var(--animation-delay, 0s);
+}
+
+/* Pie Chart Animation */
+@keyframes pieChart {
+  0% {
+    stroke-dashoffset: 251.2;
+  }
+  100% {
+    stroke-dashoffset: 50.24;
+  }
+}
+
+.animate-pie-chart {
+  animation: pieChart 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+/* Count Up Animation */
+@keyframes countUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-count-up {
+  animation: countUp 0.6s ease-out forwards;
+  animation-delay: var(--animation-delay, 0s);
+}
+
+/* Platform Logo Hover Effects */
+.platform-logo {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.platform-logo:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.platform-logo img,
+.platform-logo div {
+  transition: all 0.3s ease;
+}
+
+.platform-logo:hover img,
+.platform-logo:hover div {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Background Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-animated {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Pulse Animation for CTA */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Stagger Animation for Grid Items */
+.animate-slide-up:nth-child(1) { animation-delay: 0.1s; }
+.animate-slide-up:nth-child(2) { animation-delay: 0.2s; }
+.animate-slide-up:nth-child(3) { animation-delay: 0.3s; }
+.animate-slide-up:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Animation Adjustments */
+@media (max-width: 768px) {
+  .animate-bounce-slow {
+    animation-duration: 4s;
+  }
+  
+  .platform-logo {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Performance Optimizations */
+.platform-logo,
+.animate-loading-bar,
+.animate-pie-chart,
+.animate-count-up {
+  will-change: transform, opacity;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-bounce-slow,
+  .animate-loading-bar,
+  .animate-pie-chart,
+  .animate-count-up,
+  .animate-pulse {
+    animation: none;
+  }
+  
+  .platform-logo:hover {
+    transform: none;
+  }
+}
+
 /* Global Times New Roman Font */
 * {
   font-family: 'Times New Roman', Times, serif !important;
