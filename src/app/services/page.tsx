@@ -429,21 +429,55 @@ export default function ServicesPage() {
             <p className="text-xl text-gray-700">Digital Marketing Services That Drive Traffic Through SEO, Social Media & Email Campaigns</p>
           </div>
 
-          <div className="bg-gray-50 rounded-3xl p-10 border border-gray-200 shadow-lg">
-            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              Our Google review service combines strategic online reputation management with proven digital marketing techniques to drive traffic and boost sales. By mastering SEO strategies, executing targeted social media campaigns, and implementing effective email marketing, we help your business dominate search rankings and convert more customers.
-            </p>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Online reputation management integrates Google reviews management with comprehensive digital marketing to control your online presence. Our SEO-driven approach ensures search engines and customers find positive content about your brand, while our social media campaigns and email marketing strategies actively drive traffic to your website and convert visitors into loyal customers.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                Our Google review service combines strategic online reputation management with proven digital marketing techniques to drive traffic and boost sales. By mastering SEO strategies, executing targeted social media campaigns, and implementing effective email marketing, we help your business dominate search rankings and convert more customers.
+              </p>
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                Online reputation management integrates Google reviews management with comprehensive digital marketing to control your online presence. Our SEO-driven approach ensures search engines and customers find positive content about your brand, while our social media campaigns and email marketing strategies actively drive traffic to your website and convert visitors into loyal customers.
+              </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {['Google review service', 'Google reviews management', 'SEO strategies to drive traffic', 'Social media campaigns', 'Email marketing services', 'Online reputation management', 'Digital marketing for sales', 'Traffic-driving SEO tactics'].map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-ada-pink flex-shrink-0" />
-                  <span className="text-gray-900">{item}</span>
+              <div className="grid md:grid-cols-2 gap-4">
+                {['Google review service', 'Google reviews management', 'SEO strategies to drive traffic', 'Social media campaigns', 'Email marketing services', 'Online reputation management', 'Digital marketing for sales', 'Traffic-driving SEO tactics'].map((item, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-ada-pink flex-shrink-0" />
+                    <span className="text-gray-900">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Keyword Research Dashboard */}
+            <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Reputation Management Keyword Performance</h3>
+                <p className="text-gray-600">Real-time keyword insights showing the growing demand for reputation management services</p>
+              </div>
+              
+              <img 
+                src="/images/keywords.jpg" 
+                alt="Reputation Management Keyword Research Dashboard - 2K impressions with global breakdown showing United States, United Kingdom, India, and Canada leading search volumes"
+                className="w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
+              />
+              
+              <div className="mt-6 grid grid-cols-2 gap-4 text-center">
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
+                  <div className="text-2xl font-bold">2K+</div>
+                  <div className="text-sm opacity-90">Monthly Impressions</div>
                 </div>
-              ))}
+                <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg">
+                  <div className="text-2xl font-bold">4+</div>
+                  <div className="text-sm opacity-90">Top Countries</div>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                <p className="text-sm text-gray-700 text-center">
+                  <span className="font-semibold text-ada-pink">High Search Volume:</span> The "reputation management" keyword shows consistent 2K+ monthly impressions globally, with the United States leading at 809 impressions, followed by the UK (234), Canada (189), and India (78).
+                </p>
+              </div>
             </div>
           </div>
         </div>
