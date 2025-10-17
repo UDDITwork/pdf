@@ -392,95 +392,166 @@ export default function ServicesPage() {
           {/* Platform Logos with Animations */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">Control Your Narrative Across All Platforms</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center justify-items-center">
-              {/* ChatGPT */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300">
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <img 
-                    src="https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A" 
-                    alt="ChatGPT Logo" 
-                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
-                  />
-                </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">ChatGPT</p>
+            
+            {/* Puppet Hands Control Image */}
+            <div className="relative mb-12 flex justify-center">
+              <div className="relative z-10 animate-fade-in">
+                <img 
+                  src="/images/puppet hands.jpg" 
+                  alt="Controlling AI platforms and social media with puppet hands - VATALIQUE reputation management"
+                  className="puppet-hands w-full max-w-2xl h-auto object-contain filter drop-shadow-2xl hover:drop-shadow-3xl transition-all duration-500 hover:scale-105 animate-puppet-control"
+                  style={{
+                    mixBlendMode: 'multiply',
+                    filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))'
+                  }}
+                />
               </div>
-
-              {/* Google */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.1s'}}>
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <img 
-                    src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" 
-                    alt="Google Logo" 
-                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
-                  />
-                </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">Google</p>
+              
+              {/* Floating particles effect around hands */}
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-ada-pink rounded-full animate-float opacity-60"></div>
+                <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-purple-500 rounded-full animate-float opacity-40" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-blue-500 rounded-full animate-float opacity-50" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-1/4 right-1/3 w-1 h-1 bg-green-500 rounded-full animate-float opacity-45" style={{animationDelay: '1.5s'}}></div>
+                <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-yellow-500 rounded-full animate-float opacity-35" style={{animationDelay: '2s'}}></div>
+                <div className="absolute bottom-1/2 right-1/2 w-1.5 h-1.5 bg-red-500 rounded-full animate-float opacity-40" style={{animationDelay: '2.5s'}}></div>
               </div>
-
-              {/* Gemini */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.2s'}}>
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Google_Gemini_logo_2025.svg/2560px-Google_Gemini_logo_2025.svg.png" 
-                    alt="Google Gemini Logo" 
-                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+              
+              {/* Connection lines effect (visual representation of control) */}
+              <div className="absolute inset-0 pointer-events-none opacity-20">
+                <svg className="w-full h-full" viewBox="0 0 800 400">
+                  <defs>
+                    <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ec4899" stopOpacity="0.6"/>
+                      <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.3"/>
+                    </linearGradient>
+                  </defs>
+                  <path 
+                    d="M 400 200 Q 300 150 200 250 Q 100 350 150 400" 
+                    stroke="url(#connectionGradient)" 
+                    strokeWidth="2" 
+                    fill="none"
+                    strokeDasharray="5,5"
+                    className="animate-pulse"
                   />
-                </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">Gemini</p>
+                  <path 
+                    d="M 400 200 Q 500 150 600 250 Q 700 350 650 400" 
+                    stroke="url(#connectionGradient)" 
+                    strokeWidth="2" 
+                    fill="none"
+                    strokeDasharray="5,5"
+                    className="animate-pulse"
+                    style={{animationDelay: '0.5s'}}
+                  />
+                </svg>
               </div>
-
-              {/* Perplexity */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.3s'}}>
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300">
-                    <span className="text-white font-bold text-xl">P</span>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              {/* Row 1 */}
+              <div className="grid grid-cols-2 gap-12 mb-8">
+                {/* ChatGPT */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300">
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <img 
+                      src="https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A" 
+                      alt="ChatGPT Logo" 
+                      className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                    />
                   </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">ChatGPT</p>
                 </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">Perplexity</p>
-              </div>
 
-              {/* Bing */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.4s'}}>
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <div className="w-full h-full bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300">
-                    <span className="text-white font-bold text-xl">B</span>
+                {/* Google */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.1s'}}>
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <img 
+                      src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" 
+                      alt="Google Logo" 
+                      className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                    />
                   </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">Google</p>
                 </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">Bing</p>
               </div>
 
-              {/* Reddit */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.5s'}}>
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <img 
-                    src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/8612/Reddit_Lockup_3x-19c80010-89b1-4474-b437-a33e29130a9f.png" 
-                    alt="Reddit Logo" 
-                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
-                  />
-                </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">Reddit</p>
-              </div>
-
-              {/* Quora */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.6s'}}>
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <img 
-                    src="https://download.logo.wine/logo/Quora/Quora-Logo.wine.png" 
-                    alt="Quora Logo" 
-                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
-                  />
-                </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">Quora</p>
-              </div>
-
-              {/* Twitter */}
-              <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.7s'}}>
-                <div className="w-16 h-16 flex items-center justify-center relative">
-                  <div className="w-full h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300">
-                    <span className="text-white font-bold text-xl">𝕏</span>
+              {/* Row 2 */}
+              <div className="grid grid-cols-2 gap-12 mb-8">
+                {/* Gemini */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.2s'}}>
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <img 
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Google_Gemini_logo_2025.svg/2560px-Google_Gemini_logo_2025.svg.png" 
+                      alt="Google Gemini Logo" 
+                      className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                    />
                   </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">Gemini</p>
                 </div>
-                <p className="text-xs font-semibold mt-2 text-gray-700">Twitter/X</p>
+
+                {/* Perplexity */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.3s'}}>
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <img 
+                      src="https://journalists.org/wp-content/uploads/2024/08/Perplexity-Primary-Logo.png" 
+                      alt="Perplexity Logo" 
+                      className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">Perplexity</p>
+                </div>
+              </div>
+
+              {/* Row 3 */}
+              <div className="grid grid-cols-2 gap-12 mb-8">
+                {/* Bing */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.4s'}}>
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <div className="w-full h-full bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300">
+                      <span className="text-white font-bold text-2xl">B</span>
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">Bing</p>
+                </div>
+
+                {/* Reddit */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.5s'}}>
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <img 
+                      src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/8612/Reddit_Lockup_3x-19c80010-89b1-4474-b437-a33e29130a9f.png" 
+                      alt="Reddit Logo" 
+                      className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">Reddit</p>
+                </div>
+              </div>
+
+              {/* Row 4 */}
+              <div className="grid grid-cols-2 gap-12">
+                {/* Quora */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.6s'}}>
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <img 
+                      src="https://download.logo.wine/logo/Quora/Quora-Logo.wine.png" 
+                      alt="Quora Logo" 
+                      className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">Quora</p>
+                </div>
+
+                {/* Twitter/X */}
+                <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.7s'}}>
+                  <div className="w-24 h-24 flex items-center justify-center relative">
+                    <img 
+                      src="https://img.favpng.com/2/8/0/x-logo-TKRm4vpp.jpg" 
+                      alt="Twitter/X Logo" 
+                      className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold mt-3 text-gray-700">Twitter/X</p>
+                </div>
               </div>
             </div>
           </div>
@@ -631,7 +702,7 @@ export default function ServicesPage() {
               </div>
               
               <img 
-                src="/images/keywords.jpg" 
+                src="/images/keywords.png" 
                 alt="Reputation Management Keyword Research Dashboard - 2K impressions with global breakdown showing United States, United Kingdom, India, and Canada leading search volumes"
                 className="w-full h-auto rounded-lg shadow-md"
                 loading="lazy"
