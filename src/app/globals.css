@@ -113,11 +113,18 @@
 .platform-logo img,
 .platform-logo div {
   transition: all 0.3s ease;
+  background: transparent !important;
+}
+
+.platform-logo img {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .platform-logo:hover img,
 .platform-logo:hover div {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2)) !important;
 }
 
 /* Gradient Background Animation */

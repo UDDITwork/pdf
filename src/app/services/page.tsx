@@ -395,74 +395,90 @@ export default function ServicesPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center justify-items-center">
               {/* ChatGPT */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300">
-                <img 
-                  src="https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A" 
-                  alt="ChatGPT Logo" 
-                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                />
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <img 
+                    src="https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A" 
+                    alt="ChatGPT Logo" 
+                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                  />
+                </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">ChatGPT</p>
               </div>
 
               {/* Google */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.1s'}}>
-                <img 
-                  src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" 
-                  alt="Google Logo" 
-                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                />
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <img 
+                    src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png" 
+                    alt="Google Logo" 
+                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                  />
+                </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">Google</p>
               </div>
 
               {/* Gemini */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.2s'}}>
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Google_Gemini_logo_2025.svg/2560px-Google_Gemini_logo_2025.svg.png" 
-                  alt="Google Gemini Logo" 
-                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                />
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Google_Gemini_logo_2025.svg/2560px-Google_Gemini_logo_2025.svg.png" 
+                    alt="Google Gemini Logo" 
+                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                  />
+                </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">Gemini</p>
               </div>
 
               {/* Perplexity */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.3s'}}>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">P</span>
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300">
+                    <span className="text-white font-bold text-xl">P</span>
+                  </div>
                 </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">Perplexity</p>
               </div>
 
               {/* Bing */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.4s'}}>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">B</span>
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <div className="w-full h-full bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300">
+                    <span className="text-white font-bold text-xl">B</span>
+                  </div>
                 </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">Bing</p>
               </div>
 
               {/* Reddit */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.5s'}}>
-                <img 
-                  src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/8612/Reddit_Lockup_3x-19c80010-89b1-4474-b437-a33e29130a9f.png" 
-                  alt="Reddit Logo" 
-                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                />
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <img 
+                    src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/8612/Reddit_Lockup_3x-19c80010-89b1-4474-b437-a33e29130a9f.png" 
+                    alt="Reddit Logo" 
+                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                  />
+                </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">Reddit</p>
               </div>
 
               {/* Quora */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.6s'}}>
-                <img 
-                  src="https://download.logo.wine/logo/Quora/Quora-Logo.wine.png" 
-                  alt="Quora Logo" 
-                  className="w-16 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                />
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <img 
+                    src="https://download.logo.wine/logo/Quora/Quora-Logo.wine.png" 
+                    alt="Quora Logo" 
+                    className="w-full h-full object-contain filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300"
+                  />
+                </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">Quora</p>
               </div>
 
               {/* Twitter */}
               <div className="platform-logo animate-bounce-slow hover:scale-110 transition-all duration-300" style={{animationDelay: '0.7s'}}>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">𝕏</span>
+                <div className="w-16 h-16 flex items-center justify-center relative">
+                  <div className="w-full h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center filter drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300">
+                    <span className="text-white font-bold text-xl">𝕏</span>
+                  </div>
                 </div>
                 <p className="text-xs font-semibold mt-2 text-gray-700">Twitter/X</p>
               </div>
